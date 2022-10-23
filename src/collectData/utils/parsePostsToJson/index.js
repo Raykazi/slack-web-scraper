@@ -1,4 +1,4 @@
-const { isDebugMode } = require('../isDebugMode')
+const { isDebugMode } = require('../../../parseData/utils/isDebugMode')
 const { isValidPost, isValidThread } = require('../filterHTMLByValidElement')
 const cheerio = require('cheerio')
 

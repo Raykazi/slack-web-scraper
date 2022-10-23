@@ -1,5 +1,5 @@
 const { filterHTMLByValidElement, isValidPost, isValidThread, isValidDateDividerLine } = require('./index')
-const { loadTestFile } = require('../loadTestFile')
+const { loadTestFile } = require('../../../parseData/utils/loadTestFile')
 
 describe('filterHTMLByValidElement()', () => {
   it('filters invalid posts', () => {

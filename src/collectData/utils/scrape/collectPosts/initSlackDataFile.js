@@ -22,8 +22,8 @@ async function createSlackDataFolder() {
   }
 }
 
-async function createSlackDataFile({ type, name }) {
-  const filePath = SLACK_DATA_FOLDER_PATH + type + '-' + name.replace(' ', '_') + '-' + createTimestamp() + '.html'
+async function createSlackDataFile(path) {
+  const filePath = path;
 
   try {
     const fileHandle = await fs.open(filePath, 'w')
@@ -50,19 +50,6 @@ const appendHTMLToSlackDataFile = filePath => postsHTML => {
       console.log('Failed to append HTML data to Slack data file.')
       throw error
     })
-}
-
-function createTimestamp() {
-  const date = new Date()
-
-  const year = date.getFullYear()
-  const month = ('0' + (date.getMonth() + 1)).slice(-2)
-  const day = ('0' + date.getDate()).slice(-2)
-  const hours = ('0' + date.getHours()).slice(-2)
-  const minutes = ('0' + date.getMinutes()).slice(-2)
-  const seconds = ('0' + date.getSeconds()).slice(-2)
-
-  return [year, month, day, hours, minutes, seconds].join('-')
 }
 
 exports.initSlackDataFile = initSlackDataFile

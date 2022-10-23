@@ -1,4 +1,4 @@
-const { loadTestFile } = require('../loadTestFile')
+const { loadTestFile } = require('../../../parseData/utils/loadTestFile')
 const { groupByDate } = require('./index')
 
 describe('groupByDate', () => {

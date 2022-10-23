@@ -1,5 +1,5 @@
-const { loadTestFile } = require('../loadTestFile')
-const { parsePostsToJson, parsePost, parseThread } = require('.')
+const { loadTestFile } = require('../../../parseData/utils/loadTestFile')
+const { parsePostsToJson, parsePost, parseThread } = require('./index')
 
 describe('parsePostsToJson()', () => {
   it('Parses posts grouped by date', () => {
